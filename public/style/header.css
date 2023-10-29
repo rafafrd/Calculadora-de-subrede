@@ -1,0 +1,18 @@
+
+.nav-item:hover {
+  background-color: var(--pink);
+}
+
+.menu-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#menu-checkbox {
+  display: none;
+}
+
+#menu-checkbox:checked ~ .nav-list {
+  display: flex;
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora de Sub Redes</title>
+    <link rel="stylesheet" href="../../public/style/style.css">
+  </head>
+  <body>
+    <!-- falta terminar o cabeçalho (menu) -->
+    <header>
+      <nav>
+        <img src="../../public/img/NERDFIX Logo - Black with Transparent Background - 5000x5000.png" class="logo" alt="Logo Nerdfix" />
+        <label for="menu-checkbox" class="menu-label">
+          <img src="../../public/img/MenuHamburguer.png" class="menu-img" alt="Menu hamburguer" />
+        </label>
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="ip.html">Descobrir a classe do IP</a></li>
+        </ul>
+      </nav> 
+    </header>
+    <main>
+      <!-- -->
+      <form>
+        <h1 class="title">Descobrir Ranges</h1>
+        <div class="input-container">
+          <label class="label" for="ip">Escreva o IP</label>
+          <input placeholder="000.000.000.000" id="ip" class="input-ip" />
+        </div>
+
+        <div class="input-container">
+          <label class="label">Quantas Sub-Redes?</label>
+          <select class="selection">
+            <option class="option">Opção 1</option>
+            <option class="option">Opção 2</option>
+            <option class="option">Opção 3</option>
+            <option class="option">Opção 4</option>
+          </select>
+        </div>
+
+        <div class="input-container">
+          <label class="label">Qual Tipo do IP?</label>
+          <div class="radio-container">
+            <div class="radio-item-container">
+              <input type="radio" id="a" name="type" checked />
+              <label class="label" for="a">A</label>
+            </div>
+            <div class="radio-item-container">
+              <input type="radio" id="b" name="type" />
+              <label class="label" for="b">B</label>
+            </div>
+            <div class="radio-item-container">
+              <input type="radio" id="c" name="type" />
+              <label class="label" for="c">C</label>
+            </div>
+          </div>
+        </div>
+
+        <button class="button" type="submit">Calcular</button>
+      </form>
+
+      <div class="result">
+        
+      </div>
+      <!-- fazer um texto -->
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut nisl metus. Vivamus eleifend lectus eget feugiat mollis. Etiam facilisis aliquet ligula a egestas. Nunc sed porta urna, vitae fermentum turpis. Vestibulum semper, massa non pellentesque faucibus, dolor ante dictum elit, ac euismod tortor magna id enim. Nam iaculis at massa vel lobortis.
+      </p>
+      <a href="ip.html">site ip</a>
+    </main>
+
+    <footer>
+      <img src="github" alt="github" />
+      <p>Copyright © 2023 CFRANS - Rafafrd</p>
+    </footer>
+  </body>
+</html>
