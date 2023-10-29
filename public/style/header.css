@@ -11,6 +11,10 @@ header {
   height: 100%;
 }
 
+.logo {
+  width: 56px;
+}
+
 .menu-img {
   width: 32px;
   cursor: pointer;
@@ -41,4 +45,5 @@ header {
 
 .nav-item {
   font-size: 18px;
+  text-decoration: none;
 }
