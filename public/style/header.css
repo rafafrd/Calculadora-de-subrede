@@ -36,14 +36,16 @@ header {
   justify-items: center;
   padding: 12px;
   position: absolute;
-  right: 16px;
+  right: 12%;
   top: 90px;
   background-color: white;
   border-radius: 8px;
   list-style: none;
+  text-transform: uppercase;
 }
 
 .nav-item {
   font-size: 18px;
   text-decoration: none;
+  color: black;
 }

@@ -4,6 +4,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -11,17 +12,17 @@ body {
 }
 
 main {
-  height: calc(100vh - (75px + 75px));
+  min-height: calc(100vh - (75px + 75px));
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 16px 12% 16px 12%;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 24px;
   gap: 32px;
   width: 100%;
 }
@@ -44,12 +45,12 @@ form {
 }
 
 .selection {
-  padding: 12px;
   border: none;
   outline: none;
   font-size: 18px;
   border-radius: 12px;
   cursor: pointer;
+  padding: 12px;
 }
 
 .input-ip {
@@ -85,33 +86,24 @@ form {
   margin: 24px 0;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 24px;
-  height: 75px;
-  align-items: center;
-  background-color: #0014A0;
-}
-
-footer p {
-  color: white;
-}
-
 .text {
   font-size: 18px;
-  padding: 24px;
-  width: 80%;
   max-width: 800px;
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
+  main {
+    padding: 0px 12% 16px 12%;
+  }
+
   form {
+    padding: 24px;
     background-image: url('../img/FundoFigma.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100vw;
   }
 
   .title {
