@@ -13,7 +13,7 @@
         <input type="submit" value="Descobrir">
     </form>
 
-    <div id="mensagemErro" class="mensagemErro">Endereço IP inválido!</div>
+    <div id="message-error" class="message-error">Endereço IP inválido!</div>
 
 <?php
 

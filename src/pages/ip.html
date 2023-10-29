@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Calculadora de Sub Redes</title>
     <link rel="stylesheet" href="../../public/style/style.css">
+    <link rel="stylesheet" href="../../public/style/header.css">
     <script src="../script/main.js"></script>
   </head>
   <body>
     <header>
-      <img src="../../public/img/NERDFIX Logo - Black with Transparent Background - 5000x5000.png" class="logo" alt="Logo Nerdfix" />
-      <label for="menu-checkbox" class="menu-label">
-        <img src="../../public/img/MenuHamburguer.png" class="menu-img" alt="Menu hamburguer" />
-      </label>
-      <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="ip.html">Descobrir a classe do IP</a></li>
-      </ul>
+      <nav class="nav">
+        <img src="../../public/img/NERDFIX Logo - Black with Transparent Background - 5000x5000.png" class="logo" alt="Logo Nerdfix" />
+        <div>
+          <input type="checkbox" id="menu" >
+          <label for="menu" class="label-menu">
+            <img src="../../public/img/menu.svg" alt="Menu" class="menu-img" />
+          </label>
+          <ul class="nav-items">
+            <li class="nav-item">Início</li>
+            <li class="nav-item">Descobrir Classe do IP</li>
+            <li class="nav-item">Converter CIDR</li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main>
       <h1>Descobrir Classe de IP</h1>
@@ -26,9 +33,7 @@
         <input type="submit" value="Descobrir">
     </form>
 
-    <div id="mensagemErro" class="mensagemErro">Endereço IP inválido!</div>
-
-    
+    <div id="message-error" class="message-error">Endereço IP inválido!</div>
   </main>
     <footer>
       <img src="github" alt="github" />

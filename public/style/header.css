@@ -1,18 +1,44 @@
-
-.nav-item:hover {
-  background-color: var(--pink);
+header {
+  background-color: #0014A0;
+  height: 75px;
+  padding: 12px 12%;
 }
 
-.menu-label {
-  cursor: pointer;
+.nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
-#menu-checkbox {
+.menu-img {
+  width: 32px;
+  cursor: pointer;
+}
+
+#menu {
   display: none;
 }
 
-#menu-checkbox:checked ~ .nav-list {
+#menu:checked ~ .nav-items {
   display: flex;
+}
+
+.nav-items {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-items: center;
+  padding: 12px;
+  position: absolute;
+  right: 16px;
+  top: 90px;
+  background-color: white;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.nav-item {
+  font-size: 18px;
 }
