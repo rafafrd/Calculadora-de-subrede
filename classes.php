@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Classe IP</title>
-  <link rel="stylesheet" href="../../public/style/style.css">
-  <link rel="stylesheet" href="../../public/style/header.css">
-  <link rel="stylesheet" href="../../public/style/footer.css">
+  <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./public/style/style.css">
+  <link rel="stylesheet" href="./public/style/header.css">
+  <link rel="stylesheet" href="./public/style/footer.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
@@ -14,16 +15,16 @@
 <body>
   <header>
     <nav class="nav">
-      <img src="../../public/img/logo.png" class="logo" alt="Logo Nerdfix" />
+      <img src="./public/img/Logo.png" class="logo" alt="Logo Nerdfix" />
       <div>
         <input type="checkbox" id="menu" >
         <label for="menu" class="label-menu">
-          <img src="../../public/img/menu.svg" alt="Menu" class="menu-img" />
+          <img src="./public/img/menu.svg" alt="Menu" class="menu-img" />
         </label>
         <ul class="nav-items">
-          <a href="/src/pages/index.html" class="nav-item">Início</a>
-          <a href="/src/pages/classe.html" class="nav-item">Descobrir Classe do IP</a>
-          <a href="/src/pages/cidr.html" class="nav-item">Converter CIDR</a>
+          <a href="./src/pages/index.html" class="nav-item">Início</a>
+          <a href="./src/pages/classe.html" class="nav-item">Descobrir Classe do IP</a>
+          <a href="./src/pages/cidr.html" class="nav-item">Converter CIDR</a>
         </ul>
       </div>
     </nav>
@@ -81,7 +82,7 @@
 
   </main>
   <footer>
-    <img src="../../public/img/github-original.svg" alt="github" />
+    <img src="./public/img/github-original.svg" alt="github" />
     <p>Copyright © 2023 CFRANS - Rafafrd</p>
   </footer>
 </body>
