@@ -59,7 +59,8 @@ form {
   outline: none;
   border: none;
   border-radius: 12px;
-  font-size: 18px;
+  font-size: 19px;
+  text-align: center;
 }
 
 .radio-container {
@@ -78,12 +79,21 @@ form {
   border: none;
 }
 
+.button:hover {
+  background-color: #0e62d8;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
 .result {
   width: 100%;
-  min-height: 32px;
+  min-height: 200px;
   background-color: white;
   border-radius: 12px;
   margin: 24px 0;
+  text-align: center;
 }
 
 .text {
@@ -92,13 +102,28 @@ form {
   text-align: center;
 }
 
+.mensagemErro {
+  color: red;
+  display: none;
+}
+
+.shake {
+  animation: shake 0.8s 1;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
 @media screen and (min-width: 768px) {
   main {
     padding: 0px 12% 16px 12%;
   }
 
   form {
-    padding: 24px;
+    padding: 35px;
     background-image: url('../img/FundoFigma.png');
     background-position: center;
     background-repeat: no-repeat;
