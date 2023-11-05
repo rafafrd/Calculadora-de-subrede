@@ -5,18 +5,18 @@ footer {
   justify-content: center;
   padding: 12px 12%;
   background-color: #0014A0;
-  min-height: 75px;
+  min-height: 65px;
   gap: 12px;
 }
 
 footer p {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   text-align: center;
 }
 
 footer img {
-  width: 48px;
+  width: 30px;
 }
 
 @media screen and (min-width: 768px) {

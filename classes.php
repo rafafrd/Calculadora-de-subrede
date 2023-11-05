@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classe IP</title>
+  <title>NerdFix - Descobrir Classe IP</title>
   <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./public/style/style.css">
   <link rel="stylesheet" href="./public/style/header.css">
@@ -83,7 +83,7 @@
   </main>
   <footer>
     <img src="./public/img/github-original.svg" alt="github" />
-    <p>Copyright © 2023 CFRANS - Rafafrd</p>
+    <p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
   </footer>
 </body>
 </html>
