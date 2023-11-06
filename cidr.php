@@ -16,7 +16,7 @@
 <body>
   <header>
     <nav class="nav">
-      <img src="./public/img/Logo.png" class="logo" alt="Logo Nerdfix" />
+        <a href="./index.php"><img src="./public/img/Logo.png" class="logo" alt="Logo Nerdfix" /></a>
       <div>
         <input type="checkbox" id="menu" >
         <label for="menu" class="label-menu">
@@ -24,8 +24,8 @@
         </label>
         <ul class="nav-items">
           <a href="./src/pages/index.html" class="nav-item">Início</a>
-          <a href="./src/pages/classe.html" class="nav-item">Descobrir Classe do IP</a>
-          <a href="./src/pages/cidr.html" class="nav-item">Converter CIDR</a>
+          <a href="./classes.php" class="nav-item">Descobrir Classe do IP</a>
+          <a href="./cidr.php" class="nav-item">Conversor CIDR</a>
         </ul>
       </div>
     </nav>
