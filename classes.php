@@ -42,9 +42,7 @@
     </form>
 
     <div class="result" id="result">
-
-      <!-- TODO: DESCOBRIR PQ O ERRO NAO TA APARECENDO -->
-      <!-- QUALQUER COISA COLOCAR SÓ UM ALERT MESMO AO INVES DE PISCAR O ERRO -->
+      
       <div id="mensagemErroIp" class="mensagemErro">Endereço IP inválido!</div>
     
       <!-- TODO: ESTILIZAR O RESULTADO, DEIXAR MAIOR, E CENTRALIZAR NA ALTURA -->

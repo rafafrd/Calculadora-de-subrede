@@ -43,7 +43,7 @@
       <input type="submit" name="submitCidr" value="Converter para IPv4" class="button">
     </form>
 
-    <form method="POST" action="" onsubmit="return validarCidr(document.getElementById('cidr').value);">
+    <form method="POST" action="" onsubmit="return validarMascara(document.getElementById('ipv4').value);">
       <div class="input-container">
         <label for="ipv4" class="label">Digite o endereço IPv4:</label>
         <input type="text" id="ipv4" name="ipv4" placeholder="por exemplo: 255.255.0.0" class="input-ip">
@@ -53,9 +53,7 @@
 
     <div class="result" id="result">
 
-      <!-- TODO: DESCOBRIR PQ O ERRO NAO TA APARECENDO -->
-      <!-- QUALQUER COISA COLOCAR SÓ UM ALERT MESMO AO INVES DE PISCAR O ERRO -->
-      <div id="mensagemErroIp" class="mensagemErro">Endereço IP inválido!</div>
+      <div id="mensagemErroCidr" class="mensagemErro">Notação CIDR inválida!</div>
 
       <div id="mensagemErroMascara" class="mensagemErro">Máscara IP inválida!</div>
     
