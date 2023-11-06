@@ -1,16 +1,18 @@
 // Função para exibir mensagem de erro e aplicar classe "shake"
 function exibirErro(divErro, valido) {
     if (valido == true) {
+        console.log("Verificação válida, removendo erro")
         divErro.style.display = "none";
         divErro.classList.remove("shake");
     } else {
+        console.log("Verificação inválida, exibindo erro")
         divErro.style.display = "block";
         divErro.classList.add("shake");
     }
 }
 
 function validarIp(enderecoIp) {
-    var divErro = document.getElementById("mensagemErro");
+    var divErro = document.getElementById("mensagemErroIp");
     var valido = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(enderecoIp);
     exibirErro(divErro, valido);
     return valido;
