@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NerdFix - Descobrir Classe IP</title>
   <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
+  <script src="./src/script/main.js"></script>
   <link rel="stylesheet" href="./public/style/style.css">
   <link rel="stylesheet" href="./public/style/header.css">
   <link rel="stylesheet" href="./public/style/footer.css">
@@ -82,6 +83,7 @@
 
   </main>
   <footer>
+    
     <img src="./public/img/github-original.svg" alt="github" />
     <p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
   </footer>
