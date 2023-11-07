@@ -23,9 +23,10 @@
           <img src="./public/img/menu.svg" alt="Menu" class="menu-img" />
         </label>
         <ul class="nav-items">
-          <a href="./src/pages/index.html" class="nav-item">Início</a>
+          <a href="./index.php" class="nav-item">Início</a>
           <a href="./classes.php" class="nav-item">Descobrir Classe do IP</a>
           <a href="./cidr.php" class="nav-item">Conversor CIDR</a>
+          <a href="./exibirip.php" class="nav-item">Exibir meu IP</a>
         </ul>
       </div>
     </nav>
