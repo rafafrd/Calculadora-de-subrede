@@ -1,64 +1,136 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NerdFix - Calculadora IP</title>
+  <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
+  <script src="./src/script/main.js"></script>
+  <link rel="stylesheet" href="./public/style/style.css">
+  <link rel="stylesheet" href="./public/style/header.css">
+  <link rel="stylesheet" href="./public/style/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="./index.php"><img src="./public/img/Logo.png" class="logo" alt="Logo Nerdfix" /></a>
+      <div>
+        <input type="checkbox" id="menu" >
+        <label for="menu" class="label-menu">
+          <img src="./public/img/menu.svg" alt="Menu" class="menu-img" />
+        </label>
+        <ul class="nav-items">
+          <a href="./index.php" class="nav-item">Calculadora de IP</a>
+          <a href="./classes.php" class="nav-item">Descobrir Classes</a>
+          <a href="./cidr.php" class="nav-item">Conversor CIDR</a>
+          <a href="./exibirip.php" class="nav-item">Exibir meu IP</a>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-$ip = [192, 168, 1, 100];
-$cidr = 14;
+<main>
 
-// Converter o endereço IP em binário
-$ipBinary = [];
-foreach ($ip as $octet) {
-    $ipBinary[] = str_pad(decbin($octet), 8, '0', STR_PAD_LEFT);
-}
-$ipBinary = implode('', $ipBinary);
+    <form method="POST" action="" onsubmit="return validarCalculadora(document.getElementById('ip').value, document.getElementById('cidr').value);">
+      <h1 class="title">Calculadora de IP</h1>
+      <div class="input-container">
+        <label for="ip" class="label">Digite o endereço IP:</label>
+        <input type="text" id="ip" name="ip" placeholder="Exemplo: 192.168.1.1" class="input-ip">
+        <label for="cidr" class="label">Digite a notação CIDR:</label>
+        <input type="text" id="cidr" name="cidr" placeholder="Exemplo: 24" class="input-ip">
+      </div>
+      <input type="submit" value="Calcular" class="button">
+    </form>
 
-// Construir a máscara de sub-rede em binário
-$subnetMaskBinary = str_pad(str_repeat('1', $cidr) . str_repeat('0', 32 - $cidr), 32, '0', STR_PAD_LEFT);
+    <div class="result" id="result">
 
-// Realizar a operação de "E lógico" para obter o endereço de rede
-$networkBinary = '';
-for ($i = 0; $i < 32; $i++) {
-    $networkBinary .= $ipBinary[$i] & $subnetMaskBinary[$i];
-}
+        <!-- TODO: VERIFICAR A VALIDAÇAO QUE NAO TA FUNCIONANDO -->
+        <div id="mensagemErroCalc" class="mensagemErro">Endereço IP ou CIDR inválido!</div>
 
-// Converter o endereço de rede de binário de volta para decimal
-$network = [];
-for ($i = 0; $i < 4; $i++) {
-    $network[] = bindec(substr($networkBinary, $i * 8, 8));
-}
+        <?php
 
-// Calcular o endereço de broadcast
-$broadcastBinary = '';
-for ($i = 0; $i < 32; $i++) {
-    $broadcastBinary .= $ipBinary[$i] | ($subnetMaskBinary[$i] ^ 1);
-}
-$broadcast = [];
-for ($i = 0; $i < 4; $i++) {
-    $broadcast[] = bindec(substr($broadcastBinary, $i * 8, 8));
-}
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $ipInput = isset($_POST['ip']) ? $_POST['ip'] : '';
+                $cidrInput = isset($_POST['cidr']) ? $_POST['cidr'] : '';
 
-// Calcular o primeiro host
-$firstHostBinary = substr_replace($networkBinary, '1', -1);
-$firstHost = [];
-for ($i = 0; $i < 4; $i++) {
-    $firstHost[] = bindec(substr($firstHostBinary, $i * 8, 8));
-}
+                // Certifique-se de que os valores de $ipInput e $cidrInput são válidos
+                $ip = explode('.', $ipInput); // Converte o IP em um array
+                $cidr = intval($cidrInput);
 
-// Calcular o último host
-$lastHostBinary = substr_replace($broadcastBinary, '0', -1);
-$lastHost = [];
-for ($i = 0; $i < 4; $i++) {
-    $lastHost[] = bindec(substr($lastHostBinary, $i * 8, 8));
-}
+                // Converter o endereço IP em binário
+                $ipBinary = [];
+                foreach ($ip as $octet) {
+                    $ipBinary[] = str_pad(decbin($octet), 8, '0', STR_PAD_LEFT);
+                }
+                $ipBinary = implode('', $ipBinary);
 
-// Calcular o número máximo de hosts
-$maxHosts = pow(2, 32 - $cidr) - 2;
+                // Construir a máscara de sub-rede em binário
+                $subnetMaskBinary = str_pad(str_repeat('1', $cidr) . str_repeat('0', 32 - $cidr), 32, '0', STR_PAD_LEFT);
 
-// Exibir os resultados
-echo "Endereço IP: " . implode('.', $ip) . "<br>";
-echo "Máscara de Sub-rede: " . long2ip(ip2long('255.255.255.255') << (32 - $cidr)) . " (/$cidr)<br>";
-echo "Endereço de Rede: " . implode('.', $network) . "<br>";
-echo "Broadcast: " . implode('.', $broadcast) . "<br>";
-echo "Primeiro Host: " . implode('.', $firstHost) . "<br>";
-echo "Último Host: " . implode('.', $lastHost) . "<br>";
-echo "Número Máximo de Hosts: " . $maxHosts . "<br>";
+                // Realizar a operação de "E lógico" para obter o endereço de rede
+                $networkBinary = '';
+                for ($i = 0; $i < 32; $i++) {
+                    $networkBinary .= $ipBinary[$i] & $subnetMaskBinary[$i];
+                }
 
-?>
+                // Converter o endereço de rede de binário de volta para decimal
+                $network = [];
+                for ($i = 0; $i < 4; $i++) {
+                    $network[] = bindec(substr($networkBinary, $i * 8, 8));
+                }
+
+                // Calcular o endereço de broadcast
+                $broadcastBinary = '';
+                for ($i = 0; $i < 32; $i++) {
+                    $broadcastBinary .= $ipBinary[$i] | ($subnetMaskBinary[$i] ^ 1);
+                }
+                $broadcast = [];
+                for ($i = 0; $i < 4; $i++) {
+                    $broadcast[] = bindec(substr($broadcastBinary, $i * 8, 8));
+                }
+
+                // Calcular o primeiro host
+                $firstHostBinary = substr_replace($networkBinary, '1', -1);
+                $firstHost = [];
+                for ($i = 0; $i < 4; $i++) {
+                    $firstHost[] = bindec(substr($firstHostBinary, $i * 8, 8));
+                }
+
+                // Calcular o último host
+                $lastHostBinary = substr_replace($broadcastBinary, '0', -1);
+                $lastHost = [];
+                for ($i = 0; $i < 4; $i++) {
+                    $lastHost[] = bindec(substr($lastHostBinary, $i * 8, 8));
+                }
+
+                // Calcular o número máximo de hosts
+                $maxHosts = pow(2, 32 - $cidr) - 2;
+
+                // Exibir os resultados
+                echo "Endereço IP: " . implode('.', $ip) . "<br>";
+                echo "Máscara: " . long2ip(ip2long('255.255.255.255') << (32 - $cidr)) . " (/$cidr)<br>";
+                echo "Endereço de Rede: " . implode('.', $network) . "<br>";
+                echo "Broadcast: " . implode('.', $broadcast) . "<br>";
+                echo "Primeiro Host: " . implode('.', $firstHost) . "<br>";
+                echo "Último Host: " . implode('.', $lastHost) . "<br>";
+                echo "Número Máximo de Hosts: " . $maxHosts . "<br>";
+            }
+        ?>
+    </div>
+
+    <div class="explicacao">
+        <h2>Título</h2>
+        <p>Corpo do texto</p>
+    </div>
+
+</main>
+
+<footer>
+<img src="./public/img/github-original.svg" alt="github" />
+<p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
+</footer>
+</body>
+</html>
