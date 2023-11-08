@@ -103,9 +103,9 @@
                 }
 
                 $cidrNotacao = "/$cidr";
-
-                echo "<br>Máscara em bits: $ipBits[0].$ipBits[1].$ipBits[2].$ipBits[3]";
-                echo "<br>Máscara em IPv4: $ipDecimal[0].$ipDecimal[1].$ipDecimal[2].$ipDecimal[3]";
+                
+                echo "<br>Máscara em Bits: " . implode('.', $ipBits);
+                echo "<br>Máscara em IPv4: " . implode('.', $ipDecimal);
                 echo "<br>Notação CIDR: $cidrNotacao";
             }
 
@@ -115,7 +115,7 @@
                 $contagem = substr_count($binario, '1');
 
                 echo "<br>Máscara em Bits: $binario";
-                echo "<br>Máscara em Ipv4: $ipv4";
+                echo "<br>Máscara em IPv4: $ipv4";
                 echo "<br>Notação CIDR: /$contagem";
             }
 
