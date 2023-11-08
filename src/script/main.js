@@ -41,3 +41,21 @@ function validarCidr(cidr) {
     exibirErro(divErro, valido);
     return valido;
 }
+
+function validarCalculadora(enderecoIp, cidr) {
+    console.log("inicio verifica")
+    var divErro = document.getElementById('mensagemErroCalc');
+
+    var ipValido = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(enderecoIp);
+    var cidrValido = cidr >= 1 && cidr <= 30;
+  
+    if (ipValido == true && cidrValido == true){
+        console.log("ambos verdadeiros");
+        exibirErro(divErro, true);
+        return true;
+    } else {
+        console.log("ambos falsos");
+        exibirErro(divErro, false);
+        return false;
+    }
+}
