@@ -102,15 +102,6 @@ form {
   text-align: center;
 }
 
-.mensagemErro {
-  color: red;
-  display: none;
-}
-
-.shake {
-  animation: shake 0.8s 1;
-}
-
 .explicacao {
   text-align: center;
   line-height: 130%;
@@ -120,6 +111,47 @@ form {
 
 .explicacao p {
   margin-top: 20px;
+}
+
+/* Estilos para o tema escuro */
+.dark-theme {
+  background-color: #333;
+  color: white;
+}
+
+/* Estilos para o popup de erro */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7); /* Inicialmente em escala menor */
+  width: 400px; /* Largura maior */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  z-index: 1000;
+  border-radius: 10px; /* Bordas arredondadas */
+  font-size: 16px; /* Fonte menor */
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.5s, transform 0.5s; /* Transições suaves */
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Escala 1 para exibir */
+}
+
+.popup h2 {
+  margin: 15px;
+  color: #f00; /* Cor vermelha para o erro */
+}
+
+.popup img {
+  width: 30px; /* Tamanho da imagem de erro */
+  vertical-align: middle;
 }
 
 @keyframes shake {

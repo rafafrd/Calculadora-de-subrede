@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NerdFix - Conversor CIDR</title>
   <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
-  <script src="./src/script/main.js"></script>
   <link rel="stylesheet" href="./public/style/style.css">
   <link rel="stylesheet" href="./public/style/header.css">
   <link rel="stylesheet" href="./public/style/footer.css">
@@ -52,11 +51,12 @@
       <input type="submit" name="submitIpv4" value="Converter para CIDR" class="button">
     </form>                                               
 
+    <div class="popup" id="popup">
+        <h2><img src="./public/img/erro.svg" alt="Erro" /> Endereço IP ou CIDR inválido!</h2>
+        <button id="closePopup" class="button">OK</button>
+    </div>
+
     <div class="result" id="result">
-
-      <div id="mensagemErroCidr" class="mensagemErro">Notação CIDR inválida!</div>
-
-      <div id="mensagemErroMascara" class="mensagemErro">Máscara IP inválida!</div>
     
       <!-- TODO: ESTILIZAR O RESULTADO, DEIXAR MAIOR, E CENTRALIZAR NA ALTURA -->
       <?php
@@ -152,6 +152,7 @@
   <footer>
     <img src="./public/img/github-original.svg" alt="github" />
     <p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
+    <script src="./src/script/main.js"></script>
   </footer>
 </body>
 </html>

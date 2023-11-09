@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NerdFix - Calculadora IP</title>
   <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
-  <script src="./src/script/main.js"></script>
   <link rel="stylesheet" href="./public/style/style.css">
   <link rel="stylesheet" href="./public/style/header.css">
   <link rel="stylesheet" href="./public/style/footer.css">
@@ -45,10 +44,12 @@
       <input type="submit" value="Calcular" class="button">
     </form>
 
-    <div class="result" id="result">
+    <div class="popup" id="popup">
+        <h2><img src="./public/img/erro.svg" alt="Erro" /> Endereço IP ou CIDR inválido!</h2>
+        <button id="closePopup" class="button">OK</button>
+    </div>
 
-        <!-- TODO: VERIFICAR A VALIDAÇAO QUE NAO TA FUNCIONANDO -->
-        <div id="mensagemErroCalc" class="mensagemErro">Endereço IP ou CIDR inválido!</div>
+    <div class="result" id="result">
 
         <?php
 
@@ -129,8 +130,9 @@
 </main>
 
 <footer>
-<img src="./public/img/github-original.svg" alt="github" />
-<p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
+  <img src="./public/img/github-original.svg" alt="github" />
+  <p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
+  <script src="./src/script/main.js"></script>
 </footer>
 </body>
 </html>

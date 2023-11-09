@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NerdFix - Descobrir Classe IP</title>
   <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
-  <script src="./src/script/main.js"></script>
+
   <link rel="stylesheet" href="./public/style/style.css">
   <link rel="stylesheet" href="./public/style/header.css">
   <link rel="stylesheet" href="./public/style/footer.css">
@@ -42,10 +42,12 @@
       <input type="submit" value="Descobrir" class="button">
     </form>
 
-    <div class="result" id="result">
+    <div class="popup" id="popup">
+        <h2><img src="./public/img/erro.svg" alt="Erro" /> Endereço IP inválido!</h2>
+        <button id="closePopup" class="button">OK</button>
+    </div>
 
-      <div id="mensagemErroIp" class="mensagemErro">Endereço IP inválido!</div>
-    
+    <div class="result" id="result">
       <!-- TODO: ESTILIZAR O RESULTADO, DEIXAR MAIOR, E CENTRALIZAR NA ALTURA -->
       <?php
           if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -94,9 +96,10 @@
 
   </main>
   <footer>
-    
+    <button id="theme-toggle">Alternar Tema</button>
     <img src="./public/img/github-original.svg" alt="github" />
     <p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
+    <script src="./src/script/main.js"></script>
   </footer>
 </body>
 </html>
