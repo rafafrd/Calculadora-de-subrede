@@ -29,7 +29,7 @@ form {
 }
 
 form h2 {
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -180,6 +180,10 @@ form h2 {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
+  }
+
+  form h2 {
+    color: white;
   }
 
   .title {
