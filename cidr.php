@@ -39,17 +39,15 @@
         <h1 class="title">Conversor CIDR</h1>
         <label for="cidr" class="label">Digite a notação CIDR:</label>
         <input type="text" id="cidr" name="cidr" placeholder="Exemplo: 16" class="input-ip">
-      </div>
       <input type="submit" name="submitCidr" value="Converter para IPv4" class="button">
     </form>
 
     <form method="POST" action="" onsubmit="return validarMascara(document.getElementById('ipv4').value);">
-      <div class="input-container">
         <label for="ipv4" class="label">Digite o endereço IPv4:</label>
         <input type="text" id="ipv4" name="ipv4" placeholder="por exemplo: 255.255.0.0" class="input-ip">
-      </div>
       <input type="submit" name="submitIpv4" value="Converter para CIDR" class="button">
-    </form>                                               
+    </form>
+    </div>                                               
 
     <div class="popup" id="popup">
         <h2><img src="./public/img/erro.svg" alt="Erro" /> Endereço IP ou CIDR inválido!</h2>

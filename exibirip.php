@@ -33,7 +33,7 @@
   </header>
   <main>
 
-    <!-- TODO: ARRUMAR A COR DO TEXTO PARA BRANCO, E CENTRALIZAR ELE TODO -->
+    <!-- TODO: ARRUMAR A COR DO TEXTO PARA BRANCO (PC) E MUDAR PARA AZUL ESCURO NO MOBILE, E CENTRALIZAR ELE TODO -->
     <form>
         <h1 class="title">Exibir meu IP</h1>
         <?php
@@ -52,9 +52,9 @@
         ?>
     </form>
 
-  </main>
+ 
 
-  <!-- TODO: REMOVER O ESPAÇO EM BRANCO ACIMA, E CENTRALIZAR O CONTEUDO -->
+  <!-- TODO: REMOVER O ESPAÇO ACIMA, E CENTRALIZAR O TEXTO -->
   <div class="explicacao">
     <h2>IP Público</h2>
     <p>O endereço IP público é o identificador único da sua conexão com a Internet. 
@@ -68,6 +68,8 @@
         online e na solução de problemas de rede. É uma ferramenta valiosa para identificar e verificar a procedência de 
         servidores e é amplamente usado em configurações de e-mail e segurança na web.</p>
   </div>
+
+  </main>
 
   <footer>
     

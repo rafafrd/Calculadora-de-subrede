@@ -9,6 +9,7 @@
 
 body {
   background-color: #DCEFFF;
+  overflow-x:hidden;
 }
 
 main {
@@ -25,6 +26,11 @@ form {
   align-items: center;
   gap: 32px;
   width: 100%;
+}
+
+form h2 {
+  color: white;
+  text-align: center;
 }
 
 .title {
@@ -94,6 +100,7 @@ form {
   border-radius: 12px;
   margin: 24px 0;
   text-align: center;
+  min-height: 70px;
 }
 
 .text {
@@ -107,6 +114,7 @@ form {
   line-height: 130%;
   max-width: 90%;
   color: #303030;
+  margin-top: 15px;
 }
 
 .explicacao p {

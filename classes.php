@@ -96,7 +96,7 @@
 
   </main>
   <footer>
-    <button id="theme-toggle">Alternar Tema</button>
+    <!-- <button id="theme-toggle">Alternar Tema</button> -->
     <img src="./public/img/github-original.svg" alt="github" />
     <p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
     <script src="./src/script/main.js"></script>
