@@ -123,14 +123,14 @@
     </div>
 
     <div class="explicacao">
-        <h2>Título</h2>
-        <p>Corpo do texto</p>
+        <h2>Calculadora de Sub-Redes</h2>
+        <p style="font-size: large;" >Uma calculadora de sub-rede é uma ferramenta essencial para profissionais de redes de computadores e administradores de sistemas. Ela desempenha um papel crucial na gestão e otimização de endereços IP em uma rede, facilitando a criação e manutenção de sub-redes. Vamos explorar como essas calculadoras operam e os motivos pelos quais são fundamentais em ambientes de rede.
+        </p>
     </div>
 
 </main>
 
 <footer>
-  <img src="./public/img/github-original.svg" alt="github" />
   <p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
   <script src="./src/script/main.js"></script>
 </footer>

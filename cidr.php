@@ -148,7 +148,6 @@
 
   </main>
   <footer>
-    <img src="./public/img/github-original.svg" alt="github" />
     <p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
     <script src="./src/script/main.js"></script>
   </footer>

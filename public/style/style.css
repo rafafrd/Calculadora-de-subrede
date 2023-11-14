@@ -24,12 +24,12 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 10px;
   width: 100%;
 }
 
 form h2 {
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -101,10 +101,11 @@ form h2 {
   margin: 24px 0;
   text-align: center;
   min-height: 70px;
+  font-size: 100px;
 }
 
 .text {
-  font-size: 18px;
+  font-size: 20px;
   max-width: 800px;
   text-align: center;
 }
@@ -180,6 +181,10 @@ form h2 {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
+  }
+
+  form h2 {
+    color: white;
   }
 
   .title {
