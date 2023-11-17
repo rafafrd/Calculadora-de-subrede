@@ -44,7 +44,7 @@
 
     <form method="POST" action="" onsubmit="return validarMascara(document.getElementById('ipv4').value);">
         <label for="ipv4" class="label">Digite o endereço IPv4:</label>
-        <input type="text" id="ipv4" name="ipv4" placeholder="por exemplo: 255.255.0.0" class="input-ip">
+        <input type="text" id="ipv4" name="ipv4" placeholder="Exemplo: 255.255.0.0" class="input-ip">
       <input type="submit" name="submitIpv4" value="Converter para CIDR" class="button">
     </form>
     </div>                                               

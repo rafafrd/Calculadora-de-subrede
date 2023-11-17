@@ -94,15 +94,14 @@ form h2 {
 }
 
 .result {
-  width: 70%;
+  width: 95%;
   padding: 20px;
   background-color: white;
   border-radius: 12px;
   margin: 24px 0;
   text-align: center;
   min-height: 70px;
-  font-size: 100px;
-}
+  }
 
 .text {
   font-size: 20px;
@@ -193,5 +192,9 @@ form h2 {
 
   .label {
     color: white;
+  }
+
+  .result {
+    width: 60%;
   }
 }
