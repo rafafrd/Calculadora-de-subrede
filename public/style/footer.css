@@ -4,7 +4,8 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 12px 12%;
-  background-color: #0014A0;
+  /* background-color: #0014A0; */
+  background: linear-gradient(90deg, #000c64, #0014A0, #000c64);
   min-height: 75px;
   gap: 12px;
 }

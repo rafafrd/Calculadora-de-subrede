@@ -1,5 +1,6 @@
 header {
-  background-color: #0014A0;
+  /* background-color: #0014A0; */
+  background: linear-gradient(90deg, #000c64, #0014A0, #000c64);
   height: 75px;
   padding: 12px 12%;
 }

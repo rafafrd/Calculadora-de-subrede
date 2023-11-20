@@ -50,6 +50,7 @@
     </div>
 
     <div class="result" id="result">
+    <p class="msgResultado" id="msgResultado">Seu resultado aparecerá aqui</p>
 
         <?php
 
@@ -111,6 +112,7 @@
                 $maxHosts = pow(2, 32 - $cidr) - 2;
 
                 // Exibir os resultados
+                echo "<script>document.getElementById('msgResultado').style.display='none';</script>";
                 echo "Endereço IP: " . implode('.', $ip) . "<br>";
                 echo "Máscara: " . long2ip(ip2long('255.255.255.255') << (32 - $cidr)) . " (/$cidr)<br>";
                 echo "Endereço de Rede: " . implode('.', $network) . "<br>";

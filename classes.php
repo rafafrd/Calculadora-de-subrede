@@ -48,6 +48,7 @@
     </div>
 
     <div class="result" id="result">
+      <p class="msgResultado" id="msgResultado">Seu resultado aparecerá aqui</p>
       <!-- TODO: ESTILIZAR O RESULTADO, DEIXAR MAIOR, E CENTRALIZAR NA ALTURA -->
       <?php
           if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -64,6 +65,8 @@
                   # separando o primeiro octeto e convertendo em numeros inteiros
                   $primeiroOcteto = intval($octetos[0]);
 
+
+                  echo "<script>document.getElementById('msgResultado').style.display='none';</script>";
                   # conferindo os ranges para descobrir a classe
                   if ($primeiroOcteto > 0 && $primeiroOcteto < 128) {
                       echo "IP classe A";

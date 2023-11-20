@@ -101,6 +101,7 @@ form h2 {
   margin: 24px 0;
   text-align: center;
   min-height: 70px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.068), 0 6px 20px 0 rgba(0, 0, 0, 0.068)
   }
 
 .text {
@@ -160,6 +161,11 @@ form h2 {
 .popup img {
   width: 30px; /* Tamanho da imagem de erro */
   vertical-align: middle;
+}
+
+.msgResultado {
+  display: block;
+  color: #bdbdbd;
 }
 
 @keyframes shake {

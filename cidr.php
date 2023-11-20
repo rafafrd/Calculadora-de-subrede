@@ -55,6 +55,7 @@
     </div>
 
     <div class="result" id="result">
+    <p class="msgResultado" id="msgResultado">Seu resultado aparecerá aqui</p>
     
       <!-- TODO: ESTILIZAR O RESULTADO, DEIXAR MAIOR, E CENTRALIZAR NA ALTURA -->
       <?php
@@ -101,7 +102,8 @@
                 }
 
                 $cidrNotacao = "/$cidr";
-                
+
+                echo "<script>document.getElementById('msgResultado').style.display='none';</script>";
                 echo "<br>Máscara em Bits: " . implode('.', $ipBits);
                 echo "<br>Máscara em IPv4: " . implode('.', $ipDecimal);
                 echo "<br>Notação CIDR: $cidrNotacao";
@@ -112,6 +114,7 @@
 
                 $contagem = substr_count($binario, '1');
 
+                echo "<script>document.getElementById('msgResultado').style.display='none';</script>";
                 echo "<br>Máscara em Bits: $binario";
                 echo "<br>Máscara em IPv4: $ipv4";
                 echo "<br>Notação CIDR: /$contagem";
