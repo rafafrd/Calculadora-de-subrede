@@ -104,6 +104,7 @@
                 $cidrNotacao = "/$cidr";
 
                 echo "<script>document.getElementById('msgResultado').style.display='none';</script>";
+                echo "<script>document.getElementById('result').scrollIntoView({ behavior: 'smooth'});</script>";
                 echo "<br>Máscara em Bits: " . implode('.', $ipBits);
                 echo "<br>Máscara em IPv4: " . implode('.', $ipDecimal);
                 echo "<br>Notação CIDR: $cidrNotacao";
