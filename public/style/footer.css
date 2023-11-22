@@ -20,6 +20,10 @@ footer img {
   width: 52px;
 }
 
+input[type=range]:hover::-webkit-slider-thumb {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   footer {
     flex-direction: row;
