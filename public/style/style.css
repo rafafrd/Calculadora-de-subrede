@@ -130,6 +130,10 @@ form h2 {
   margin-top: 20px;
 }
 
+.explicacaoip p {
+  margin-top: 20px;
+}
+
 /* Estilos para o tema escuro */
 .dark-theme {
   background-color: #333;
