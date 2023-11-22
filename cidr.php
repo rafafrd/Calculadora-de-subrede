@@ -152,6 +152,8 @@
 
   </main>
   <footer>
+    <p>Ajustar tamanho da fonte</p>
+    <input type="range" min="10" max="32" value="16" step="2" onchange="document.body.style.fontSize = this.value + 'px';">
     <p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
     <script src="./src/script/main.js"></script>
   </footer>
