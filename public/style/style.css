@@ -115,6 +115,14 @@ form h2 {
   line-height: 130%;
   max-width: 90%;
   color: #303030;
+  margin-top: 20px;
+}
+
+.explicacaoip {
+  text-align: center;
+  line-height: 130%;
+  max-width: 90%;
+  color: #303030;
   margin-top: 50px;
 }
 

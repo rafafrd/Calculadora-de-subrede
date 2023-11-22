@@ -55,7 +55,7 @@
  
 
   <!-- TODO: REMOVER O ESPAÇO ACIMA, E CENTRALIZAR O TEXTO -->
-  <div class="explicacao">
+  <div class="explicacaoip">
     <h2>IP Público</h2>
     <p>O endereço IP público é o identificador único da sua conexão com a Internet. 
         Ele funciona como um endereço postal global, permitindo que outros dispositivos o encontrem na rede. 
