@@ -87,10 +87,10 @@
 
     <div class="explicacao">
       <h2>O que são classes IP?</h2>
-      <p>As classes de IP referem-se a uma forma de categorizar endereços IP em redes baseadas na primeira parte do endereço IP, chamada de "octeto". Existem cinco classes de IP: A, B, C, D e E. Aqui está um breve significado de cada uma:
-        <br><br><b>Classe A (0.0.0.0 a 127.0.0.0):</b><br> Os endereços da Classe A têm um primeiro octeto no intervalo de 0 a 127. Eles são usados para redes muito grandes e oferecem muitos endereços disponíveis.
-        <br><br><b>Classe B (128.0.0.0 a 191.0.0.0):</b><br> Os endereços da Classe B têm um primeiro octeto no intervalo de 128 a 191. Eles são usados para redes de tamanho médio.
-        <br><br><b>Classe C (192.0.0.0 a 223.0.0.0):</b><br> Os endereços da Classe C têm um primeiro octeto no intervalo de 192 a 223. Eles são usados para redes menores e oferecem menos endereços disponíveis do que as Classes A e B.
+      <p>As classes de IP referem-se a uma forma de categorizar endereços IP em redes baseadas na primeira parte do endereço IP, chamada de "octeto". <br>Existem cinco classes de IP: A, B, C, D e E. Aqui está um breve significado de cada uma:
+        <br><br><b>Classe A (0.0.0.0 a 127.0.0.0):</b><br> Os endereços da Classe A têm um primeiro octeto no intervalo de 0 a 127. <br>Eles são usados para redes muito grandes e oferecem muitos endereços disponíveis.
+        <br><br><b>Classe B (128.0.0.0 a 191.0.0.0):</b><br> Os endereços da Classe B têm um primeiro octeto no intervalo de 128 a 191. <br>Eles são usados para redes de tamanho médio.
+        <br><br><b>Classe C (192.0.0.0 a 223.0.0.0):</b><br> Os endereços da Classe C têm um primeiro octeto no intervalo de 192 a 223. <br>Eles são usados para redes menores e oferecem menos endereços disponíveis do que as Classes A e B.
         <br><br><b>Classe D (224.0.0.0 a 239.0.0.0):</b><br> Os endereços da Classe D são usados para multicast, que é a transmissão de dados para vários receptores.
         <br><br><b>Classe E (240.0.0.0 a 255.0.0.0):</b><br> Os endereços da Classe E são reservados para fins experimentais e não são geralmente usados em redes públicas.
         <br><br>Essas classes de IP eram mais relevantes no passado, quando o sistema de endereçamento IP estava em seu estágio inicial. Hoje em dia, o sistema de endereçamento IP é mais flexível com a introdução da <a href="./cidr.php">notação CIDR</a> (Classless Inter-Domain Routing), que permite dividir e alocar endereços de forma mais granular, independentemente das classes. No entanto, a compreensão das classes de IP ainda é útil para entender a estrutura básica do endereçamento IP.
