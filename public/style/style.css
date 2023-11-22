@@ -126,11 +126,7 @@ form h2 {
   margin-top: 50px;
 }
 
-.explicacao p {
-  margin-top: 20px;
-}
-
-.explicacaoip p {
+.explicacao p, .explicacaoip p {
   margin-top: 20px;
 }
 
