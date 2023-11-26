@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NerdFix - Exibir meu IP</title>
   <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
-  <script src="./src/script/main.js"></script>
   <link rel="stylesheet" href="./public/style/style.css">
   <link rel="stylesheet" href="./public/style/header.css">
   <link rel="stylesheet" href="./public/style/footer.css">
@@ -52,9 +51,6 @@
         ?>
     </form>
 
- 
-
-  <!-- TODO: REMOVER O ESPAÇO ACIMA, E CENTRALIZAR O TEXTO -->
   <div class="explicacaoip">
     <h2>IP Público</h2>
     <p>O endereço IP público é o identificador único da sua conexão com a Internet. 
@@ -76,6 +72,7 @@
     <input type="range" min="10" max="32" value="16" step="2" onchange="document.body.style.fontSize = this.value + 'px';">
     <p>Copyright © 2023 Caio Franson - Rafael Augusto</p>
   </footer>
+  <script src="./src/script/main.js"></script>
 </body>
 </html>
 
