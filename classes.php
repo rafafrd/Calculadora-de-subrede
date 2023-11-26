@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NerdFix - Descobrir Classe IP</title>
   <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
-
   <link rel="stylesheet" href="./public/style/style.css">
   <link rel="stylesheet" href="./public/style/header.css">
   <link rel="stylesheet" href="./public/style/footer.css">
@@ -13,12 +13,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <nav class="nav">
       <a href="./index.php"><img src="./public/img/Logo.png" class="logo" alt="Logo Nerdfix" /></a>
       <div>
-        <input type="checkbox" id="menu" >
+        <input type="checkbox" id="menu">
         <label for="menu" class="label-menu">
           <img src="./public/img/menu.svg" alt="Menu" class="menu-img" />
         </label>
@@ -37,51 +38,44 @@
       <h1 class="title">Descobrir a Classe do IP</h1>
       <div class="input-container">
         <label for="ip" class="label">Digite o endereço IP:</label>
-        <input type="text" id="ip" name="ip" placeholder="Exemplo: 192.168.1.1" class="input-ip">
+        <input type="text" id="ip" name="ip" placeholder="Exemplo: 192.168.1.1" class="input-ip" title="Endereço IP" required>
       </div>
       <input type="submit" value="Descobrir" class="button">
     </form>
 
     <div class="popup" id="popup">
-        <h2><img src="./public/img/erro.svg" alt="Erro" /> Endereço IP inválido!</h2>
-        <button id="closePopup" class="button">OK</button>
+      <h2><img src="./public/img/erro.svg" alt="Erro" /> Endereço IP inválido!</h2>
+      <button id="closePopup" class="button">OK</button>
     </div>
 
     <div class="result" id="result">
       <p class="msgResultado" id="msgResultado">Seu resultado aparecerá aqui</p>
-      <!-- TODO: ESTILIZAR O RESULTADO, DEIXAR MAIOR, E CENTRALIZAR NA ALTURA -->
       <?php
-          if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-              // Verifique se o formulário foi enviado
-              if (isset($_POST["ip"])) {
+      # verifica se a solicitação é do tipo POST, e se a variável foi fornecida
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $ip = isset($_POST['ip']) ? $_POST['ip'] : '';
 
-                  # ip digitado pelo usuario
-                  $ip = $_POST["ip"];
+        # usando o explode para separar os octetos
+        $octetos = explode('.', $ip);
+        # separando o primeiro octeto e convertendo em numeros inteiros
+        $primeiroOcteto = intval($octetos[0]);
 
-                  # usando o explode para separar os octetos
-                  $octetos = explode('.', $ip);
+        echo "<script>document.getElementById('msgResultado').style.display='none';</script>";
 
-                  # separando o primeiro octeto e convertendo em numeros inteiros
-                  $primeiroOcteto = intval($octetos[0]);
-
-
-                  echo "<script>document.getElementById('msgResultado').style.display='none';</script>";
-                  # conferindo os ranges para descobrir a classe
-                  if ($primeiroOcteto > 0 && $primeiroOcteto < 128) {
-                      echo "IP classe A";
-                  } elseif ($primeiroOcteto > 127 && $primeiroOcteto < 192) {
-                      echo "IP classe B";
-                  } elseif ($primeiroOcteto > 191 && $primeiroOcteto < 224) {
-                      echo "IP classe C";
-                  } elseif ($primeiroOcteto > 223 && $primeiroOcteto < 240) {
-                      echo "IP classe D: Range de Multicast";
-                  } elseif ($primeiroOcteto > 239 && $primeiroOcteto < 256) {
-                      echo "IP classe E: Range reservado para uso futuro";
-                  }
-
-              }
-          }
+        # conferindo os ranges para descobrir a classe
+        if ($primeiroOcteto > 0 && $primeiroOcteto < 128) {
+          echo "IP classe A";
+        } elseif ($primeiroOcteto > 127 && $primeiroOcteto < 192) {
+          echo "IP classe B";
+        } elseif ($primeiroOcteto > 191 && $primeiroOcteto < 224) {
+          echo "IP classe C";
+        } elseif ($primeiroOcteto > 223 && $primeiroOcteto < 240) {
+          echo "IP classe D: Range de Multicast";
+        } elseif ($primeiroOcteto > 239 && $primeiroOcteto < 256) {
+          echo "IP classe E: Range reservado para uso futuro";
+        }
+      }
       ?>
     </div>
 
@@ -105,4 +99,5 @@
     <script src="./src/script/main.js"></script>
   </footer>
 </body>
+
 </html>

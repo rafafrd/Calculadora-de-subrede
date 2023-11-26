@@ -9,7 +9,7 @@
 
 body {
   background-color: #DCEFFF;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 main {
@@ -102,7 +102,7 @@ form h2 {
   text-align: center;
   min-height: 70px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.068), 0 6px 20px 0 rgba(0, 0, 0, 0.068)
-  }
+}
 
 .text {
   font-size: 20px;
@@ -126,60 +126,48 @@ form h2 {
   margin-top: 50px;
 }
 
-.explicacao p, .explicacaoip p {
+.explicacao p,
+.explicacaoip p {
   margin-top: 20px;
 }
 
-/* Estilos para o tema escuro */
-.dark-theme {
-  background-color: #333;
-  color: white;
-}
-
-/* Estilos para o popup de erro */
 .popup {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.7); /* Inicialmente em escala menor */
-  width: 400px; /* Largura maior */
+  transform: translate(-50%, -50%) scale(0.7);
+  width: 400px;
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
   text-align: center;
   z-index: 1000;
-  border-radius: 10px; /* Bordas arredondadas */
-  font-size: 16px; /* Fonte menor */
-  opacity: 0; /* Inicialmente invisível */
-  transition: opacity 0.5s, transform 0.5s; /* Transições suaves */
+  border-radius: 10px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .popup.show {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1); /* Escala 1 para exibir */
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .popup h2 {
   margin: 15px;
-  color: #f00; /* Cor vermelha para o erro */
+  color: #f00;
 }
 
 .popup img {
-  width: 30px; /* Tamanho da imagem de erro */
+  width: 30px;
   vertical-align: middle;
 }
 
 .msgResultado {
   display: block;
   color: #bdbdbd;
-}
-
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-  20%, 40%, 60%, 80% { transform: translateX(5px); }
 }
 
 @media screen and (min-width: 768px) {
