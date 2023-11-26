@@ -22,7 +22,7 @@
           <img src="./public/img/menu.svg" alt="Menu" class="menu-img" />
         </label>
         <ul class="nav-items">
-          <a href="./index.php" class="nav-item">Calculadora de IP</a>
+          <a href="./index.php" class="nav-item">Calculadora de Redes</a>
           <a href="./classes.php" class="nav-item">Descobrir Classes</a>
           <a href="./cidr.php" class="nav-item">Conversor CIDR</a>
           <a href="./exibirip.php" class="nav-item">Exibir meu IP</a>

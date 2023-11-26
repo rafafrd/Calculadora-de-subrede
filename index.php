@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NerdFix - Calculadora IP</title>
+  <title>NerdFix - Calculadora de Redes</title>
   <link rel="icon" href="./public/img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./public/style/style.css">
   <link rel="stylesheet" href="./public/style/header.css">
@@ -22,7 +22,7 @@
           <img src="./public/img/menu.svg" alt="Menu" class="menu-img" />
         </label>
         <ul class="nav-items">
-          <a href="./index.php" class="nav-item">Calculadora de IP</a>
+          <a href="./index.php" class="nav-item">Calculadora de Redes</a>
           <a href="./classes.php" class="nav-item">Descobrir Classes</a>
           <a href="./cidr.php" class="nav-item">Conversor CIDR</a>
           <a href="./exibirip.php" class="nav-item">Exibir meu IP</a>
@@ -125,7 +125,7 @@
     </div>
 
     <div class="explicacao">
-        <h2>Calculadora de Sub-Redes</h2>
+        <h2>Calculadora de Redes</h2>
         <p style="font-size: large;" >Uma calculadora de sub-rede é uma ferramenta essencial para profissionais de redes de computadores e administradores de sistemas. Ela desempenha um papel crucial na gestão e otimização de endereços IP em uma rede, facilitando a criação e manutenção de sub-redes. Vamos explorar como essas calculadoras operam e os motivos pelos quais são fundamentais em ambientes de rede.
         </p>
     </div>
