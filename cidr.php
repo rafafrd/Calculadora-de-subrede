@@ -87,7 +87,7 @@
         $octetosMascara = str_split($mascara, 8);
 
         echo "<script>document.getElementById('msgResultado').style.display='none';</script>";
-        echo "<br><b>Máscara em Bits: </b>" . implode('.', $octetosMascara);
+        echo "<b>Máscara em Bits: </b>" . implode('.', $octetosMascara);
         echo "<br><b>Máscara em IPv4: </b>" . implode('.', $ipDecimal);
         echo "<br><b>Notação CIDR:</b> /$cidr";
       }
@@ -98,7 +98,7 @@
         $contagem = substr_count($binario, '1');
 
         echo "<script>document.getElementById('msgResultado').style.display='none';</script>";
-        echo "<br><b>Máscara em Bits:</b> $binario";
+        echo "<b>Máscara em Bits:</b> $binario";
         echo "<br><b>Máscara em IPv4:</b> $ipv4";
         echo "<br><b>Notação CIDR:</b> /$contagem";
       }
